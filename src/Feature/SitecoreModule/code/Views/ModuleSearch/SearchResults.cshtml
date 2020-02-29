@@ -9,7 +9,7 @@
             Search Modules
         </h1>
         <p>Search results for keyword '@(Model.Keyword)'</p>
-        <ul style="list-style:none;">
+        <ul class="custom-list">
             @foreach (var entry in Model.Results)
             {
             <li>
@@ -25,6 +25,10 @@
                 </h3>
                 <p>
                     @entry.Description
+                </p>
+                <p>
+                    Created by @entry.CreatedBy in @Sitecore.DateUtil.IsoDateToDateTime(entry.Created)
+
                 </p>
                 <hr />
 

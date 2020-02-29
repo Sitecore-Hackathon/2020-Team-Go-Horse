@@ -103,17 +103,48 @@ namespace Feature.SitecoreModule.Models
     public __BaseSitecoreModule(Item item) : base(item) {
     }
 
-    public static class FieldIds {
-      
-      public static readonly ID ModuleName = ID.Parse("{8DE5D2F7-7508-4A5F-A547-12433E7F64BC}");
+    public static class FieldIds
+    {
 
-      public static readonly ID GitRepository = ID.Parse("{48D18565-5FDD-431A-BCED-4EA59C161E1D}");
+        public static readonly ID ModuleName = ID.Parse("{8DE5D2F7-7508-4A5F-A547-12433E7F64BC}");
 
-      public static readonly ID Description = ID.Parse("{EB7E1441-DC8C-4B40-9740-29B3435B408B}");
+        public static readonly ID GitRepository = ID.Parse("{48D18565-5FDD-431A-BCED-4EA59C161E1D}");
+
+        public static readonly ID Description = ID.Parse("{EB7E1441-DC8C-4B40-9740-29B3435B408B}");
+
 
     }
-    
-    /// <summary>Gets or sets the "Module Name" field.</summary>
+        public static class FieldNames
+        {
+            public static readonly string CreatedBy = "__created by";
+
+            public static readonly string Created = "__created";
+        }
+
+        public string Created
+        {
+            get
+            {
+                return this.InnerItem[FieldNames.Created];
+            }
+            set
+            {
+                this.InnerItem[FieldNames.Created] = value;
+            }
+    }
+    public string CreatedBy
+    {
+        get
+        {
+            return this.InnerItem[FieldNames.CreatedBy].Replace(@"sitecore\","");
+        }
+        set
+        {
+            this.InnerItem[FieldNames.CreatedBy] = value;
+        }
+    }
+
+        /// <summary>Gets or sets the "Module Name" field.</summary>
     public string ModuleName 
     {
       get 
