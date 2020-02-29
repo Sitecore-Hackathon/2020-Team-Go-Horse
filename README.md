@@ -15,7 +15,7 @@ and greatest information from the Git Repository.
 
 ![Module fields](documentation/images/modulefields.jpg?raw=true "Module fields") 
 
-# Documentation
+## Documentation
 
 * [Installation Guide](/documentation/installation.md) - Installation Guide
 * [Usage](/documentation/installation.md) - Using this module
