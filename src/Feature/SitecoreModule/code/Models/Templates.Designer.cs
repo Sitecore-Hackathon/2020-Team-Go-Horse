@@ -22,129 +22,25 @@ namespace Feature.SitecoreModule.Models
   using Sitecore.Data;
   
       
-  /// <summary>Represents the "_BasePage" template.</summary>
-  public partial class __BasePage : CustomItem
-  {
-    public static readonly ID TemplateID = ID.Parse("{00000000-0000-0000-0000-000000000000}");
-
-    public __BasePage(Item item) : base(item) {
-    }
-
-    public static class FieldIds {
-      
-      public static readonly ID PageTitle = ID.Parse("{C96833C8-6E8A-4711-9DAD-0C8A3BCB5B96}");
-
-      public static readonly ID BrowserTitle = ID.Parse("{586B418F-3F94-4BD5-999B-478106F47F34}");
-
-    }
-    
-    /// <summary>Gets or sets the "Page Title" field.</summary>
-    public string PageTitle 
-    {
-      get 
-      {
-        return this.InnerItem[FieldIds.PageTitle];
-      }
-      set
-      {
-        this.InnerItem[FieldIds.PageTitle] = value;
-      }
-    }
-  
-    /// <summary>Gets or sets the "Browser Title" field.</summary>
-    public string BrowserTitle 
-    {
-      get 
-      {
-        return this.InnerItem[FieldIds.BrowserTitle];
-      }
-      set
-      {
-        this.InnerItem[FieldIds.BrowserTitle] = value;
-      }
-    }
-  
-    public static __BasePage Create(Item item) 
-    {
-      return new __BasePage(item);
-    }
-
-    public static implicit operator Item (__BasePage item)
-    {
-      if (item == null)
-      {
-        return null;
-      }
-
-      return item.InnerItem;
-    }
-
-    public static explicit operator __BasePage(Item item)
-    {
-      if (item == null)
-      {
-        return null;
-      }
-
-      if (item.TemplateID != TemplateID)
-      {
-        return null;
-      }
-
-      return Create(item);
-    }
-  }
-      
   /// <summary>Represents the "_BaseSitecoreModule" template.</summary>
   public partial class __BaseSitecoreModule : CustomItem
   {
-    public static readonly ID TemplateID = ID.Parse("{5960A2DA-4A29-4D9A-9D7E-31222102A745}");
+    public static readonly ID TemplateID = ID.Parse("{00000000-0000-0000-0000-000000000000}");
 
     public __BaseSitecoreModule(Item item) : base(item) {
     }
 
-    public static class FieldIds
-    {
+    public static class FieldIds {
+      
+      public static readonly ID ModuleName = ID.Parse("{8DE5D2F7-7508-4A5F-A547-12433E7F64BC}");
 
-        public static readonly ID ModuleName = ID.Parse("{8DE5D2F7-7508-4A5F-A547-12433E7F64BC}");
+      public static readonly ID GitRepository = ID.Parse("{48D18565-5FDD-431A-BCED-4EA59C161E1D}");
 
-        public static readonly ID GitRepository = ID.Parse("{48D18565-5FDD-431A-BCED-4EA59C161E1D}");
-
-        public static readonly ID Description = ID.Parse("{EB7E1441-DC8C-4B40-9740-29B3435B408B}");
-
+      public static readonly ID Description = ID.Parse("{EB7E1441-DC8C-4B40-9740-29B3435B408B}");
 
     }
-        public static class FieldNames
-        {
-            public static readonly string CreatedBy = "__created by";
-
-            public static readonly string Created = "__created";
-        }
-
-        public string Created
-        {
-            get
-            {
-                return this.InnerItem[FieldNames.Created];
-            }
-            set
-            {
-                this.InnerItem[FieldNames.Created] = value;
-            }
-    }
-    public string CreatedBy
-    {
-        get
-        {
-            return this.InnerItem[FieldNames.CreatedBy].Replace(@"sitecore\","");
-        }
-        set
-        {
-            this.InnerItem[FieldNames.CreatedBy] = value;
-        }
-    }
-
-        /// <summary>Gets or sets the "Module Name" field.</summary>
+    
+    /// <summary>Gets or sets the "Module Name" field.</summary>
     public string ModuleName 
     {
       get 
@@ -199,6 +95,64 @@ namespace Feature.SitecoreModule.Models
     }
 
     public static explicit operator __BaseSitecoreModule(Item item)
+    {
+      if (item == null)
+      {
+        return null;
+      }
+
+      if (item.TemplateID != TemplateID)
+      {
+        return null;
+      }
+
+      return Create(item);
+    }
+  }
+      
+  /// <summary>Represents the "_BasePage" template.</summary>
+  public partial class __BasePage : CustomItem
+  {
+    public static readonly ID TemplateID = ID.Parse("{723F04A3-D01F-4DE8-8541-4827DE890529}");
+
+    public __BasePage(Item item) : base(item) {
+    }
+
+    public static class FieldIds {
+      
+      public static readonly ID BrowserTitle = ID.Parse("{586B418F-3F94-4BD5-999B-478106F47F34}");
+
+    }
+    
+    /// <summary>Gets or sets the "Browser Title" field.</summary>
+    public string BrowserTitle 
+    {
+      get 
+      {
+        return this.InnerItem[FieldIds.BrowserTitle];
+      }
+      set
+      {
+        this.InnerItem[FieldIds.BrowserTitle] = value;
+      }
+    }
+  
+    public static __BasePage Create(Item item) 
+    {
+      return new __BasePage(item);
+    }
+
+    public static implicit operator Item (__BasePage item)
+    {
+      if (item == null)
+      {
+        return null;
+      }
+
+      return item.InnerItem;
+    }
+
+    public static explicit operator __BasePage(Item item)
     {
       if (item == null)
       {

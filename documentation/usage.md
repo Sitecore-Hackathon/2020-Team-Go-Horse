@@ -15,7 +15,20 @@ and greatest information from the Git Repository.
 
 ![Module fields](documentation/images/modulefields.jpg?raw=true "Module fields") 
 
+
 ## Usage
+
+### Content Tree
+
+In a Vanilla Sitecore 9.3, this is how your content tree should look after the installation:
+
+    ![Content Tree](documentation/images/content-tree-home.jpg?raw=true "Content Tree") 
+
+**1. Marketplace** - The homepage - has a search box for users to find and browse Module Pages
+
+**2. Results** - Shows a list of modules, filtered by the search keyword input by the user
+
+**3. Modules** - Bulk repository of Sitecore modules
 
 
 ## Video
