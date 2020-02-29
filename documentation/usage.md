@@ -4,13 +4,13 @@
 
 ## Summary
 
-This module was designed to tackle one of the biggest problems with the old Sitecore Marketplace Website: **Content Duplication.**
+This module was designed to solve one of the biggest problems with the old Sitecore Marketplace Website: **Content Duplication.**
 
-Module Authors usually add documentation to the Git Repository itself, so why should we re-input all content to the Marketplace, 
-then keep it all update? 
+Module Authors usually add documentation to the Git Repository itself, so why should them duplicate all that content 
+in Marketplace, and keep it manually updated? 
 
-Instead of copy/pasting, you will link modules directly with their respective Git Repositories. 
-The GitHub WebAPI is then used to keep the Module Page in Sitecore always updated with the latest 
+Instead of copy/pasting, this module allows to link modules directly with their respective Git Repositories. 
+GitHub WebAPI is then used to keep the Module Page in Sitecore always updated with the latest 
 and greatest information from the Git Repository.
 
 ![Module fields](images/modulefields.jpg?raw=true "Module fields") 
