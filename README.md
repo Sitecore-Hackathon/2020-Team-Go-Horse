@@ -5,6 +5,7 @@
 ![Go Horse](documentation/images/gohorse.jpg?raw=true "Go Horse") 
 
 This module was designed to tackle one of the biggest problems with the old Sitecore Marketplace Website: **Content Duplication**
+
 Module Authors will usually add documentation pages to the Git Repository, so why should him re-input all content to the Marketplace?
 
 Instead of copy/pasting, you can link your module directly with a Git Repository, and have the Module Page always updated 
