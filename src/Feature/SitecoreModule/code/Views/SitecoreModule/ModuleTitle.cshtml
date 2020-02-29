@@ -1,0 +1,32 @@
+﻿@model __BaseSitecoreModule
+@using Feature.SitecoreModule.Models
+@{
+    Layout = null;
+}
+<div class="jumbotron">
+    <div class="container">
+        <h1 class="display-3">
+            @Html.Sitecore().Field(__BaseSitecoreModule.FieldIds.ModuleName.ToString(), Model.InnerItem)
+        </h1>
+        <p>
+            @Html.Sitecore().Field(__BaseSitecoreModule.FieldIds.Description.ToString(), Model.InnerItem)
+        </p>
+        <p>
+            <a class="btn btn-primary btn-lg" href="#" role="button">
+                Download
+            </a>
+        </p>
+        <p>
+            @if (Sitecore.Context.PageMode.IsExperienceEditorEditing)
+            {
+                @Html.Sitecore().Field(__BaseSitecoreModule.FieldIds.GitRepository.ToString(), Model.InnerItem)
+            }
+            else
+            {
+                <a href="@Model.GitRepository" target="_blank">
+                    @Model.GitRepository
+                </a>
+            }
+        </p>
+    </div>
+</div>

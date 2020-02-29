@@ -22,83 +22,10 @@ namespace Feature.SitecoreModule.Models
   using Sitecore.Data;
   
       
-  /// <summary>Represents the "_BaseSitecoreModule" template.</summary>
-  public partial class __BaseSitecoreModule : CustomItem
-  {
-    public static readonly ID TemplateID = ID.Parse("{5960A2DA-4A29-4D9A-9D7E-31222102A745}");
-
-    public __BaseSitecoreModule(Item item) : base(item) {
-    }
-
-    public static class FieldIds {
-      
-      public static readonly ID ModuleName = ID.Parse("{8DE5D2F7-7508-4A5F-A547-12433E7F64BC}");
-
-      public static readonly ID GitRepository = ID.Parse("{48D18565-5FDD-431A-BCED-4EA59C161E1D}");
-
-    }
-    
-    /// <summary>Gets or sets the "Module Name" field.</summary>
-    public string ModuleName 
-    {
-      get 
-      {
-        return this.InnerItem[FieldIds.ModuleName];
-      }
-      set
-      {
-        this.InnerItem[FieldIds.ModuleName] = value;
-      }
-    }
-  
-    /// <summary>Gets or sets the "Git Repository" field.</summary>
-    public string GitRepository 
-    {
-      get 
-      {
-        return this.InnerItem[FieldIds.GitRepository];
-      }
-      set
-      {
-        this.InnerItem[FieldIds.GitRepository] = value;
-      }
-    }
-  
-    public static __BaseSitecoreModule Create(Item item) 
-    {
-      return new __BaseSitecoreModule(item);
-    }
-
-    public static implicit operator Item (__BaseSitecoreModule item)
-    {
-      if (item == null)
-      {
-        return null;
-      }
-
-      return item.InnerItem;
-    }
-
-    public static explicit operator __BaseSitecoreModule(Item item)
-    {
-      if (item == null)
-      {
-        return null;
-      }
-
-      if (item.TemplateID != TemplateID)
-      {
-        return null;
-      }
-
-      return Create(item);
-    }
-  }
-      
   /// <summary>Represents the "_BasePage" template.</summary>
   public partial class __BasePage : CustomItem
   {
-    public static readonly ID TemplateID = ID.Parse("{723F04A3-D01F-4DE8-8541-4827DE890529}");
+    public static readonly ID TemplateID = ID.Parse("{00000000-0000-0000-0000-000000000000}");
 
     public __BasePage(Item item) : base(item) {
     }
@@ -153,6 +80,94 @@ namespace Feature.SitecoreModule.Models
     }
 
     public static explicit operator __BasePage(Item item)
+    {
+      if (item == null)
+      {
+        return null;
+      }
+
+      if (item.TemplateID != TemplateID)
+      {
+        return null;
+      }
+
+      return Create(item);
+    }
+  }
+      
+  /// <summary>Represents the "_BaseSitecoreModule" template.</summary>
+  public partial class __BaseSitecoreModule : CustomItem
+  {
+    public static readonly ID TemplateID = ID.Parse("{5960A2DA-4A29-4D9A-9D7E-31222102A745}");
+
+    public __BaseSitecoreModule(Item item) : base(item) {
+    }
+
+    public static class FieldIds {
+      
+      public static readonly ID ModuleName = ID.Parse("{8DE5D2F7-7508-4A5F-A547-12433E7F64BC}");
+
+      public static readonly ID GitRepository = ID.Parse("{48D18565-5FDD-431A-BCED-4EA59C161E1D}");
+
+      public static readonly ID Description = ID.Parse("{EB7E1441-DC8C-4B40-9740-29B3435B408B}");
+
+    }
+    
+    /// <summary>Gets or sets the "Module Name" field.</summary>
+    public string ModuleName 
+    {
+      get 
+      {
+        return this.InnerItem[FieldIds.ModuleName];
+      }
+      set
+      {
+        this.InnerItem[FieldIds.ModuleName] = value;
+      }
+    }
+  
+    /// <summary>Gets or sets the "Git Repository" field.</summary>
+    public string GitRepository 
+    {
+      get 
+      {
+        return this.InnerItem[FieldIds.GitRepository];
+      }
+      set
+      {
+        this.InnerItem[FieldIds.GitRepository] = value;
+      }
+    }
+  
+    /// <summary>Gets or sets the "Description" field.</summary>
+    public string Description 
+    {
+      get 
+      {
+        return this.InnerItem[FieldIds.Description];
+      }
+      set
+      {
+        this.InnerItem[FieldIds.Description] = value;
+      }
+    }
+  
+    public static __BaseSitecoreModule Create(Item item) 
+    {
+      return new __BaseSitecoreModule(item);
+    }
+
+    public static implicit operator Item (__BaseSitecoreModule item)
+    {
+      if (item == null)
+      {
+        return null;
+      }
+
+      return item.InnerItem;
+    }
+
+    public static explicit operator __BaseSitecoreModule(Item item)
     {
       if (item == null)
       {

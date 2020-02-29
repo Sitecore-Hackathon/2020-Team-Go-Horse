@@ -1,32 +1,32 @@
 ----item----
 version: 1
-id: {5960A2DA-4A29-4D9A-9D7E-31222102A745}
+id: {8DE5D2F7-7508-4A5F-A547-12433E7F64BC}
 database: master
-path: /sitecore/templates/Feature/SitecoreModule/Pages/_BaseSitecoreModule
-parent: {5992A3B5-FD9D-48BC-8B6E-04A2FC9316D7}
-name: _BaseSitecoreModule
+path: /sitecore/templates/Feature/SitecoreModule/Pages/_BaseSitecoreModule/Sitecore Module Content/Module Name
+parent: {20F16C2F-3FDE-403F-A915-DBD2A9F14529}
+name: Module Name
 master: {00000000-0000-0000-0000-000000000000}
-template: {AB86861A-6030-46C5-B394-E8F99E8B87DB}
-templatekey: Template
+template: {455A3E98-A627-4B40-8035-E683A0331AC7}
+templatekey: Template field
 
 ----field----
-field: {12C33F3F-86C5-43A5-AEB4-5598CEC45116}
-name: __Base template
-key: __base template
-content-length: 38
+field: {AB162CC0-DC80-4ABF-8871-998EE5D7BA32}
+name: Type
+key: type
+content-length: 16
 
-{1930BBEB-7805-471A-A3BE-4858AC7CF696}
+Single-Line Text
 ----field----
-field: {F7D48A55-2158-4F02-9356-756654404F73}
-name: __Standard values
-key: __standard values
-content-length: 38
+field: {BA3F86A2-4A1C-4D78-B63D-91C2779C1B5E}
+name: __Sortorder
+key: __sortorder
+content-length: 3
 
-{97844CAF-0CF2-449D-8204-506056E3D40A}
+100
 ----version----
 language: en
 version: 1
-revision: d98fbba6-cb28-46d9-9add-1d2b66a3c76d
+revision: c5f3430d-b59f-45a1-bd06-7a68bee36109
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -41,7 +41,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20200229T042644Z
+20200229T043237Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -55,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-d98fbba6-cb28-46d9-9add-1d2b66a3c76d
+c5f3430d-b59f-45a1-bd06-7a68bee36109
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20200229T043353Z
+20200229T055136Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

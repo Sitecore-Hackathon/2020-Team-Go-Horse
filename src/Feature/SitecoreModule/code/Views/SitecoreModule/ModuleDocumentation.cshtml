@@ -1,0 +1,32 @@
+﻿@model List<Feature.SitecoreModule.ViewModel.ModuleDocumentationEntry>
+@{
+    Layout = null;
+}
+
+<div id="module-doc-container" class="container">
+
+    @*Tabs*@
+    <div id="module-doc-tabs" class="btn-group" role="group" aria-label="Default button group">
+        @foreach (var entry in Model)
+        {
+            <button type="button" class="btn btn-secondary @Html.Raw(Model.IndexOf(entry) == 0 ? "active" : "")">
+                @entry.Title
+            </button>
+        }
+    </div>
+
+    @*Pages*@
+    <div id="module-doc-pages">
+        @foreach (var entry in Model)
+        {
+            <div class="card w-100" @Html.Raw(Model.IndexOf(entry) == 0 ? "" : "style='display: none;'")>
+                <div class="card-body">
+                    <p class="card-text">
+                        @entry.Content
+                    </p>
+                </div>
+            </div>
+        }
+    </div>
+
+</div>

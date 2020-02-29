@@ -119,7 +119,7 @@
     <Content Include="Models\Templates.scx.xslt">
       <DependentUpon>Templates.scx</DependentUpon>
     </Content>
-    <Content Include="web.config" />
+    <None Include="web.config" />
     <Content Include="Views\GoHorse\Layout\GoHorseLayout.cshtml" />
     <None Include="web.Debug.config">
       <DependentUpon>web.config</DependentUpon>

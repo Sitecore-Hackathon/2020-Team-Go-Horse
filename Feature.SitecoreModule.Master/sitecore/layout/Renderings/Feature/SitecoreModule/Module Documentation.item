@@ -1,32 +1,32 @@
 ----item----
 version: 1
-id: {5960A2DA-4A29-4D9A-9D7E-31222102A745}
+id: {A98FA919-E2DC-4E87-8068-C5ED9AC7FB9A}
 database: master
-path: /sitecore/templates/Feature/SitecoreModule/Pages/_BaseSitecoreModule
-parent: {5992A3B5-FD9D-48BC-8B6E-04A2FC9316D7}
-name: _BaseSitecoreModule
+path: /sitecore/layout/Renderings/Feature/SitecoreModule/Module Documentation
+parent: {B47BC3C7-4AEB-4C17-9799-B83510060911}
+name: Module Documentation
 master: {00000000-0000-0000-0000-000000000000}
-template: {AB86861A-6030-46C5-B394-E8F99E8B87DB}
-templatekey: Template
+template: {2A3E91A0-7987-44B5-AB34-35C2D9DE83B9}
+templatekey: Controller rendering
 
 ----field----
-field: {12C33F3F-86C5-43A5-AEB4-5598CEC45116}
-name: __Base template
-key: __base template
-content-length: 38
+field: {E64AD073-DFCC-4D20-8C0B-FE5AA6226CD7}
+name: Controller
+key: controller
+content-length: 83
 
-{1930BBEB-7805-471A-A3BE-4858AC7CF696}
+Feature.SitecoreModule.Controllers.SitecoreModuleController, Feature.SitecoreModule
 ----field----
-field: {F7D48A55-2158-4F02-9356-756654404F73}
-name: __Standard values
-key: __standard values
-content-length: 38
+field: {DED9E431-3604-4921-A4B3-A6EC7636A5B6}
+name: Controller Action
+key: controller action
+content-length: 19
 
-{97844CAF-0CF2-449D-8204-506056E3D40A}
+ModuleDocumentation
 ----version----
 language: en
 version: 1
-revision: d98fbba6-cb28-46d9-9add-1d2b66a3c76d
+revision: 3b6cd8d7-db21-46da-a356-f7f2de574b7d
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -41,7 +41,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20200229T042644Z
+20200229T062656Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -55,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-d98fbba6-cb28-46d9-9add-1d2b66a3c76d
+3b6cd8d7-db21-46da-a356-f7f2de574b7d
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20200229T043353Z
+20200229T062726Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
