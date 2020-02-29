@@ -6,6 +6,7 @@ using System.Net;
 using System.Text;
 using Foundation.GitHubApi.Models;
 using Newtonsoft.Json;
+using Sitecore.Collections;
 
 namespace Foundation.GitHubApi.Repositories
 {
@@ -56,7 +57,7 @@ namespace Foundation.GitHubApi.Repositories
             var httpResult = GetHttpRequest(path);
             var jsonObject = JsonConvert.DeserializeObject<List<GitItem>>(httpResult);
             var items = jsonObject ?? new List<GitItem>();
-            items = items.Where(p=>p.type=="file").ToList();
+            items = items.Where(p => p.type == "file").ToList();
             return items;
         }
 
@@ -68,7 +69,7 @@ namespace Foundation.GitHubApi.Repositories
         public List<GitContributor> GetContributors(string gitRoot)
         {
             var path = $"{gitRoot}/contributors";
-            var httpResult = GetHttpRequest( path);
+            var httpResult = GetHttpRequest(path);
             var jsonObject = JsonConvert.DeserializeObject<List<GitContributor>>(httpResult);
             return jsonObject ?? new List<GitContributor>();
         }
@@ -98,7 +99,7 @@ namespace Foundation.GitHubApi.Repositories
             {
                 url = CreateGitApiUrlFromBaseGitUrl(url);
                 var request = WebRequest.CreateHttp(url);
-                request.UserAgent = "request";               
+                request.UserAgent = "request";
                 request.Method = "GET";
                 using (var response = (HttpWebResponse)request.GetResponse())
                 {
@@ -126,46 +127,55 @@ namespace Foundation.GitHubApi.Repositories
             return url.Replace(BaseGitUrl, BaseGitApi);
         }
 
-        public string ConvertMarkdownToHtml(string gitRoot, string rawMdUrl)
+        public string ConvertMarkdownToHtml(string gitRoot, string rawMdUrl, string folder = "")
         {
             var response = GetHttpRequest(rawMdUrl);
-            response = ReplaceImagesFromJsonByRawImage(gitRoot, response);
+            response = ReplaceImagesFromJsonByRawImage(gitRoot, response, folder);
             var markDownResult = CommonMark.CommonMarkConverter.Convert(response);
             return markDownResult;
         }
 
-        private string ReplaceImagesFromJsonByRawImage(string gitRoot, string rawMdContent)
+        private string ReplaceImagesFromJsonByRawImage(string gitRoot, string rawMdContent, string folder = "")
         {
-            //Pattern for images inside the MD file: ![image name](local URL "Image Name")
-            if (!rawMdContent.Contains("!["))
+            const string imgOpen = "![";
+            const string imgClose = "\")";
+            const string imgPreUrl = "](";
+
+            if (!string.IsNullOrEmpty(folder))
+                folder = $"{folder}/";
+
+            // Nothing to parse - exit
+            if (!rawMdContent.Contains(imgOpen))
                 return rawMdContent;
 
-            var lastIndex = rawMdContent.IndexOf("](", 0, StringComparison.Ordinal);
-            var currentIndex = 0;
-
-            while (true)
+            // Build strings to be replaced
+            var index = 0;
+            var imagesToReplace = new List<KeyValuePair<string,string>>();
+            while ((index=rawMdContent.IndexOf(imgOpen, index, StringComparison.Ordinal)) != -1)
             {
-                lastIndex = (currentIndex > lastIndex) ? currentIndex : lastIndex;
-                var nextIndex = rawMdContent.IndexOf("![", lastIndex + 2, StringComparison.Ordinal);
+                var indexOfNextClosing = rawMdContent.Substring(index).IndexOf(imgClose, StringComparison.Ordinal);
+                indexOfNextClosing = indexOfNextClosing + imgClose.Length;
 
-                if (rawMdContent.Substring(lastIndex + 2).StartsWith("http")) //check if the next image already have an http in its url.
-                {
-                    if(nextIndex == -1)
-                        break;
+                var imgOriginal = rawMdContent.Substring(index, indexOfNextClosing);
+                var imgReplaced = imgOriginal.Contains("http://") || imgOriginal.Contains("https://")
+                    ? imgOriginal
+                    : imgOriginal.Replace(imgPreUrl, $"{imgPreUrl}{gitRoot}/blob/master/{folder}");
 
-                    currentIndex = rawMdContent.IndexOf("](", nextIndex, StringComparison.Ordinal);
-                    continue;
-                }
-
-                rawMdContent = rawMdContent.Insert(lastIndex + 2, $"{gitRoot}/"); //inserting the public URL to render the right image.
-
-                if (nextIndex == -1 || nextIndex == lastIndex)
-                    break;
-
-                lastIndex = rawMdContent.IndexOf("](", nextIndex, StringComparison.Ordinal);
+                imagesToReplace.Add(new KeyValuePair<string, string>(imgOriginal, imgReplaced));
+                index++;
             }
 
-            return rawMdContent;
+            // Replace all
+            if (imagesToReplace.Any())
+            {
+                foreach (var pair in imagesToReplace)
+                {
+                    if (pair.Key != pair.Value)
+                        rawMdContent = rawMdContent.Replace(pair.Key, pair.Value);
+                }
+            }
+
+            return rawMdContent;            
         }
     }
 }

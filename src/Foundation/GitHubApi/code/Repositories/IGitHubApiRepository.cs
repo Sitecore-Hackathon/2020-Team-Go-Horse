@@ -5,7 +5,7 @@ namespace Foundation.GitHubApi.Repositories
 {
     public interface IGitHubApiRepository
     {
-        string ConvertMarkdownToHtml(string gitRoot, string rawMdUrl);
+        string ConvertMarkdownToHtml(string gitRoot, string rawMdUrl, string folder = "");
         GitRepository GetGitRepository(string gitRoot);
         GitItem GetRootPage(string gitRoot);
         List<GitItem> GetDocumentationPages(string gitRoot);

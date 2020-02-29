@@ -25,19 +25,22 @@ namespace Feature.SitecoreModule.Controllers
         {
             var sitecoreModule = new __BaseSitecoreModule(PageContext.Current.Item);
             var docPages = _gitHubApiRepository.GetDocumentationPages(sitecoreModule.GitRepository);
-            var readmePage = _gitHubApiRepository.GetRootPage(sitecoreModule.GitRepository);
-            if (readmePage != null)
-            {
-                readmePage.name = "About";
-                docPages.Insert(0,readmePage);
-            }
-
-            // Get HTML content
             if (docPages.Any())
             {
                 foreach (var page in docPages)
                     page.HtmlValue =
-                        _gitHubApiRepository.ConvertMarkdownToHtml(sitecoreModule.GitRepository, page.download_url);
+                        _gitHubApiRepository.ConvertMarkdownToHtml(sitecoreModule.GitRepository, page.download_url,
+                            "documentation");
+            }
+
+            var readmePage = _gitHubApiRepository.GetRootPage(sitecoreModule.GitRepository);
+            if (readmePage != null)
+            {
+                readmePage.name = "About";
+                readmePage.HtmlValue =
+                    _gitHubApiRepository.ConvertMarkdownToHtml(sitecoreModule.GitRepository, readmePage.download_url);
+
+                docPages.Insert(0,readmePage);
             }
 
             return View(docPages);
