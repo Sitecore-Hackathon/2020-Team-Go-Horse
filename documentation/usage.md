@@ -1,4 +1,4 @@
-# Usage Instructions
+# Usage Instructions 
 
 **Category:** Sitecore Marketplace Website
 
