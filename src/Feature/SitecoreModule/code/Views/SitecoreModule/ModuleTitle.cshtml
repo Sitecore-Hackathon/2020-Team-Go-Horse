@@ -9,14 +9,6 @@
             @Html.Sitecore().Field(__BaseSitecoreModule.FieldIds.ModuleName.ToString(), Model.InnerItem)
         </h1>
         <p>
-            @Html.Sitecore().Field(__BaseSitecoreModule.FieldIds.Description.ToString(), Model.InnerItem)
-        </p>
-        <p>
-            <a class="btn btn-primary btn-lg" href="#" role="button">
-                Download
-            </a>
-        </p>
-        <p>
             @if (Sitecore.Context.PageMode.IsExperienceEditorEditing)
             {
                 @Html.Sitecore().Field(__BaseSitecoreModule.FieldIds.GitRepository.ToString(), Model.InnerItem)
@@ -27,6 +19,14 @@
                     @Model.GitRepository
                 </a>
             }
+        </p>
+        <p>
+            @Html.Sitecore().Field(__BaseSitecoreModule.FieldIds.Description.ToString(), Model.InnerItem)
+        </p>
+        <p>
+            <a class="btn btn-primary btn-lg" href="#" role="button" data-toggle="modal" data-target="#downloadModal">
+                Download
+            </a>
         </p>
     </div>
 </div>
