@@ -38,7 +38,7 @@ and avoids content redundancy.
 
 ![Module fields](images/modulefields.jpg?raw=true "Module fields") 
 
-
+Below you will visit some of the renderings used at the Module template.
 
 
 ### Module Title Rendering
