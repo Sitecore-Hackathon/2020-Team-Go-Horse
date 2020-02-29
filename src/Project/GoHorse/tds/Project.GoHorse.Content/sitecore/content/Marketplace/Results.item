@@ -1,54 +1,54 @@
 ----item----
 version: 1
-id: {362DF6A5-0CA9-484D-8F1B-8B6480FF7FE8}
+id: {4644D9C3-9106-4F50-856D-4DC33001CF24}
 database: master
-path: /sitecore/content/Home/Modules/2020
-parent: {1F774DA7-DF90-40D6-ABF0-81DE1180CF63}
-name: 2020
+path: /sitecore/content/Marketplace/Results
+parent: {756FE418-6586-4F6A-AC99-0F3FF9292FDF}
+name: Results
 master: {00000000-0000-0000-0000-000000000000}
-template: {ADB6CA4F-03EF-4F47-B9AC-9CE2BA53FF97}
-templatekey: Bucket
+template: {DBAFF377-E61E-4926-A973-8A7A78A37A8C}
+templatekey: Search Results
 
 ----version----
 language: en
 version: 1
-revision: cab799c6-2436-40c4-a6ba-d35cd996b21f
+revision: 1abf64a6-43cf-4b3f-a3e6-a8d6fbec1660
 
 ----field----
-field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
-name: __Owner
-key: __owner
-content-length: 14
+field: {C96833C8-6E8A-4711-9DAD-0C8A3BCB5B96}
+name: Page Title
+key: page title
+content-length: 7
 
-sitecore\admin
+Results
+----field----
+field: {586B418F-3F94-4BD5-999B-478106F47F34}
+name: Browser Title
+key: browser title
+content-length: 7
+
+Results
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
 key: __created
 content-length: 16
 
-20200229T053712Z
-----field----
-field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
-name: __Created by
-key: __created by
-content-length: 14
-
-sitecore\admin
+20200229T134340Z
 ----field----
 field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
 name: __Revision
 key: __revision
 content-length: 36
 
-cab799c6-2436-40c4-a6ba-d35cd996b21f
+1abf64a6-43cf-4b3f-a3e6-a8d6fbec1660
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20200229T053712Z
+20200229T145042Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

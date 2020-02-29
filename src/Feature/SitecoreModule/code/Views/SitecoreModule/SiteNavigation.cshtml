@@ -3,7 +3,7 @@
     Layout = null;
 }
 <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href="/">
         Sitecore Marketplace
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,15 +11,12 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarsExampleDefault">
         <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="/">Home</a>
-            </li>
         </ul>       
         @{
             var searchFormAction = Sitecore.Links.LinkManager.GetItemUrl(Sitecore.Context.Database.GetItem(new ID("{4644D9C3-9106-4F50-856D-4DC33001CF24}")));
         }
         <form class="form-inline my-2 my-lg-0" method="get" action="@(searchFormAction)">
-            <input id="q" name="q" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+            <input name="q" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
             <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
         </form>
     </div>

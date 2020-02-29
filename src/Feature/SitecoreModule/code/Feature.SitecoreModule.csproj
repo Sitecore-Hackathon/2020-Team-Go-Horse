@@ -131,6 +131,7 @@
     <Content Include="Views\SitecoreModule\ModuleDownloadWindow.cshtml" />
     <Content Include="Views\SitecoreModule\ModuleContributors.cshtml" />
     <Content Include="Views\ModuleSearch\SearchResults.cshtml" />
+    <Content Include="Views\ModuleSearch\HomeSearchBox.cshtml" />
     <None Include="Views\web.config" />
     <None Include="web.config" />
     <None Include="web.Debug.config">
