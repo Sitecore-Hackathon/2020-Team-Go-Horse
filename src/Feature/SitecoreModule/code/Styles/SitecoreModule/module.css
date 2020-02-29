@@ -2,7 +2,7 @@
     padding-top:15px;
 }
 .min-screen {
-    min-height: 800px;
+    min-height: 600px;
 }
 .card-contributor {
     max-width: 277px;
@@ -16,6 +16,12 @@
     padding-left: 30%;
     background: lightgray;
     margin-top: 8%;
+    margin-bottom: 8%;
     padding: 14%;
 }
-
+.custom-list{
+    list-style:none;
+}
+.search-button {
+    padding-top: 10px;
+}
