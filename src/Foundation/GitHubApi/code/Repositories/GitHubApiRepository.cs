@@ -42,12 +42,6 @@ namespace Foundation.GitHubApi.Repositories
             var jsonObject = JsonConvert.DeserializeObject<List<GitItem>>(httpResult);
             var items = jsonObject ?? new List<GitItem>();
             var item = items.FirstOrDefault(x => x.name.ToLower().Equals(fileName));
-            if (item != null)
-            {
-                var itemUrl = item.html_url.Remove(item.html_url.LastIndexOf("/", StringComparison.Ordinal));
-                item.HtmlValue = ConvertMarkdownToHtml(itemUrl, item.download_url);
-            }
-
             return item;
         }
 
@@ -63,12 +57,6 @@ namespace Foundation.GitHubApi.Repositories
             var jsonObject = JsonConvert.DeserializeObject<List<GitItem>>(httpResult);
             var items = jsonObject ?? new List<GitItem>();
             items = items.Where(p=>p.type=="file").ToList();
-            foreach (var item in items)
-            {
-                var itemUrl = item.html_url.Remove(item.html_url.LastIndexOf("/", StringComparison.Ordinal));
-                item.HtmlValue = ConvertMarkdownToHtml(itemUrl, item.download_url);
-            }
-
             return items;
         }
 
@@ -96,8 +84,6 @@ namespace Foundation.GitHubApi.Repositories
             var httpResult = GetHttpRequest(path);
             var jsonObject = JsonConvert.DeserializeObject<List<GitItem>>(httpResult);
             var items = jsonObject ?? new List<GitItem>();
-            foreach (var item in items)
-                item.HtmlValue = ConvertMarkdownToHtml(gitRoot, item.download_url);
             return items;
         }
 
@@ -140,7 +126,7 @@ namespace Foundation.GitHubApi.Repositories
             return url.Replace(BaseGitUrl, BaseGitApi);
         }
 
-        private string ConvertMarkdownToHtml(string gitRoot, string rawMdUrl)
+        public string ConvertMarkdownToHtml(string gitRoot, string rawMdUrl)
         {
             var response = GetHttpRequest(rawMdUrl);
             response = ReplaceImagesFromJsonByRawImage(gitRoot, response);

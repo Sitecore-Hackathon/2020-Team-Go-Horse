@@ -1,4 +1,5 @@
-﻿using System.Web.Mvc;
+﻿using System.Linq;
+using System.Web.Mvc;
 using Feature.SitecoreModule.Models;
 using Foundation.GitHubApi.Repositories;
 using Sitecore.Mvc.Presentation;
@@ -25,10 +26,20 @@ namespace Feature.SitecoreModule.Controllers
             var sitecoreModule = new __BaseSitecoreModule(PageContext.Current.Item);
             var docPages = _gitHubApiRepository.GetDocumentationPages(sitecoreModule.GitRepository);
             var readmePage = _gitHubApiRepository.GetRootPage(sitecoreModule.GitRepository);
-            if (readmePage == null) 
-                return View(docPages);
-            readmePage.name = "About";
-            docPages.Insert(0,readmePage);
+            if (readmePage != null)
+            {
+                readmePage.name = "About";
+                docPages.Insert(0,readmePage);
+            }
+
+            // Get HTML content
+            if (docPages.Any())
+            {
+                foreach (var page in docPages)
+                    page.HtmlValue =
+                        _gitHubApiRepository.ConvertMarkdownToHtml(sitecoreModule.GitRepository, page.download_url);
+            }
+
             return View(docPages);
         }
 
