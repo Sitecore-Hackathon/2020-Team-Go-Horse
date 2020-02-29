@@ -17,11 +17,23 @@
     background: lightgray;
     margin-top: 8%;
     margin-bottom: 8%;
-    padding: 14%;
+    padding: 8%;
 }
 .custom-list{
     list-style:none;
 }
 .search-button {
     padding-top: 10px;
+}
+
+.home-box {
+    text-align: center;
+}
+
+div.home-box h2 {
+    padding-bottom: 20px !important;
+}
+
+div.home-box p {
+    padding-bottom: 50px !important;
 }

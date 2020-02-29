@@ -85,6 +85,7 @@ namespace Foundation.GitHubApi.Repositories
             var httpResult = GetHttpRequest(path);
             var jsonObject = JsonConvert.DeserializeObject<List<GitItem>>(httpResult);
             var items = jsonObject ?? new List<GitItem>();
+            items = items.Where(p => p.type == "file").ToList();
             return items;
         }
 
