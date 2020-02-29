@@ -2,8 +2,12 @@
 @{
     Layout = null;
 }
-<div>
-    <p>Search results for keyword '@(Model.Keyword)'</p>    
+<div class="container">
+    <h1>
+        <p>&nbsp;</p>
+        Search Modules
+    </h1>
+    <p>Search results for keyword '@(Model.Keyword)'</p>
     <ul>
         @foreach (var entry in Model.Results)
         {
