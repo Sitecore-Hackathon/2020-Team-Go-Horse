@@ -51,6 +51,7 @@ Has a little bit more than the title itself.
 4. Download button
 
 
+
 ### Downloads Rendering
 
 List of downloads is dynamically populated from the Git Repository. 
@@ -58,6 +59,7 @@ List of downloads is dynamically populated from the Git Repository.
 ![Downloads](images/module-downloads.jpg?raw=true "Downloads") 
 
 The module will scan the folder **/sc.package** (at root level) and build the download list.
+
 
 
 ### Documentation Rendering
@@ -70,6 +72,7 @@ The documentation is also populated from the Git Repository.
 **2. Rest of the tabs** are dynamically populated from the folder **/documentation/** (only *.me files are displayed)
 
 
+
 ### Contributors Rendering
 
 A list of contributors is also populated from the Git Repository. 
@@ -77,8 +80,8 @@ A list of contributors is also populated from the Git Repository.
 ![Contributors](images/module-contributors.jpg?raw=true "Contributors") 
 
 
+
 ## Video
 
-Please provide a video highlighing your Hackathon module submission and provide a link to the video. Either a [direct link](https://www.youtube.com/watch?v=EpNhxW4pNKk) to the video, upload it to this documentation folder or maybe upload it to Youtube...
+For a quick introduction to this module, check this [Video Presentation](https://www.youtube.com/watch?v=EpNhxW4pNKk)
 
-[![Sitecore Hackathon Video Embedding Alt Text](https://img.youtube.com/vi/EpNhxW4pNKk/0.jpg)](https://www.youtube.com/watch?v=EpNhxW4pNKk)
