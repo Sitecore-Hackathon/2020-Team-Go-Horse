@@ -1,17 +1,23 @@
 ﻿@model Feature.SitecoreModule.ViewModels.SearchResultsViewModel
 @{
     Layout = null;
+    var count = 0;
 }
-<div class="container">
-    <h1>
-        <p>&nbsp;</p>
-        Search Modules
-    </h1>
-    <p>Search results for keyword '@(Model.Keyword)'</p>
-    <ul>
-        @foreach (var entry in Model.Results)
-        {
+    <div class="container">
+        <h1>
+            <p>&nbsp;</p>
+            Search Modules
+        </h1>
+        <p>Search results for keyword '@(Model.Keyword)'</p>
+        <ul style="list-style:none;">
+            @foreach (var entry in Model.Results)
+            {
             <li>
+                @if (count == 0)
+                {
+                    <hr />
+                }
+
                 <h3>
                     <a href="@(Sitecore.Links.LinkManager.GetItemUrl(entry.InnerItem))">
                         @entry.ModuleName
@@ -20,7 +26,10 @@
                 <p>
                     @entry.Description
                 </p>
+                <hr />
+
             </li>
-        }
-    </ul>
-</div>
+            }
+        </ul>
+    </div>
+
