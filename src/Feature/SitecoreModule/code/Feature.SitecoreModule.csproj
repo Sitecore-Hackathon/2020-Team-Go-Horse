@@ -114,13 +114,13 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\Feature\Feature.SitecoreModule.config" />
-    <Content Include="Models\Templates.scx.xslt">
+    <None Include="Models\Templates.scx.xslt">
       <DependentUpon>Templates.scx</DependentUpon>
-    </Content>
-    <Content Include="Models\Templates.scx">
+    </None>
+    <None Include="Models\Templates.scx">
       <Generator>SitecoreCodeGenerator</Generator>
       <LastGenOutput>Templates.Designer.cs</LastGenOutput>
-    </Content>
+    </None>
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="README.md" />
     <Content Include="Scripts\SitecoreModule\module-documentation.js" />

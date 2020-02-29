@@ -138,14 +138,14 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Config\Include\Project\Project.GoHorse.config" />
-    <Content Include="Models\Templates.scx">
+    <None Include="Models\Templates.scx">
       <Generator>SitecoreCodeGenerator</Generator>
       <LastGenOutput>Templates.Designer.cs</LastGenOutput>
-    </Content>
+    </None>
     <None Include="Properties\PublishProfiles\Local.pubxml" />
-    <Content Include="Models\Templates.scx.xslt">
+    <None Include="Models\Templates.scx.xslt">
       <DependentUpon>Templates.scx</DependentUpon>
-    </Content>
+    </None>
     <None Include="web.config" />
     <Content Include="Views\GoHorse\Layout\GoHorseLayout.cshtml" />
     <None Include="web.Debug.config">
