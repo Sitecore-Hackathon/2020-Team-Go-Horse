@@ -1,7 +1,5 @@
-﻿using System.Collections.Generic;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
 using Feature.SitecoreModule.Models;
-using Feature.SitecoreModule.ViewModels;
 using Foundation.GitHubApi.Repositories;
 using Sitecore.Mvc.Presentation;
 

@@ -1,0 +1,22 @@
+﻿@model Feature.SitecoreModule.ViewModels.SearchResultsViewModel
+@{
+    Layout = null;
+}
+<div>
+    <p>Search results for keyword '@(Model.Keyword)'</p>    
+    <ul>
+        @foreach (var entry in Model.Results)
+        {
+            <li>
+                <h3>
+                    <a href="@(Sitecore.Links.LinkManager.GetItemUrl(entry.InnerItem))">
+                        @entry.ModuleName
+                    </a>
+                </h3>
+                <p>
+                    @entry.Description
+                </p>
+            </li>
+        }
+    </ul>
+</div>
