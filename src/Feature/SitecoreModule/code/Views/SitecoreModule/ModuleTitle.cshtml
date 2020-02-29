@@ -9,6 +9,7 @@
             @Html.Sitecore().Field(__BaseSitecoreModule.FieldIds.ModuleName.ToString(), Model.InnerItem)
         </h1>
         <p>
+            Repository: 
             @if (Sitecore.Context.PageMode.IsExperienceEditorEditing)
             {
                 @Html.Sitecore().Field(__BaseSitecoreModule.FieldIds.GitRepository.ToString(), Model.InnerItem)
