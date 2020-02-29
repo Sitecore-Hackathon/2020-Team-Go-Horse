@@ -9,7 +9,7 @@
 
 To install this module, follow the steps below:
 
-1. Download the [Installation .update file](https://github.com/Sitecore-Hackathon/2020-Team-Go-Horse/blob/master/sc.package/GoHorse.Marketplace.1.0.update?raw=true)
+1. Download the latest [Installation .update file](https://github.com/Sitecore-Hackathon/2020-Team-Go-Horse/blob/master/sc.package)
 
 2. Open the Sitecore Installation wizard (https://yoursitecore/sitecore/admin/UpdateInstallationWizard.aspx)
 
