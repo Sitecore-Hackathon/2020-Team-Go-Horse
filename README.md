@@ -4,15 +4,16 @@
 
 ![Go Horse](documentation/images/gohorse.jpg?raw=true "Go Horse") 
 
-This module was designed to tackle one of the biggest problems with the old Sitecore Marketplace Website: **Content Duplication**
+This module was designed to tackle one of the biggest problems with the old Sitecore Marketplace Website: **Content Duplication.**
 
-Module Authors will usually add documentation pages to the Git Repository, so why should him re-input all content to the Marketplace?
+Module Authors usually add documentation to the Git Repository itself, so why should we re-input all content to the Marketplace, 
+then keep it all update? 
 
-Instead of copy/pasting, you can link your module directly with a Git Repository, and have the Module Page always updated 
-with the latest and greatest information from Git.
+Instead of copy/pasting, you will link modules directly with their respective Git Repositories. 
+The GitHub WebAPI is then used to keep the Module Page in Sitecore always updated with the latest 
+and greatest information from the Git Repository.
 
 ![Module fields](documentation/images/modulefields.jpg?raw=true "Module fields") 
-
 
 # Documentation
 
