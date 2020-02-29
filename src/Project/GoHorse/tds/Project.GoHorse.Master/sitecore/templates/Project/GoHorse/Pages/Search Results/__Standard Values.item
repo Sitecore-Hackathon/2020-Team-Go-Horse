@@ -1,0 +1,51 @@
+----item----
+version: 1
+id: {64DF6CA5-021B-4820-B24C-C571AEDEB4EE}
+database: master
+path: /sitecore/templates/Project/GoHorse/Pages/Search Results/__Standard Values
+parent: {DBAFF377-E61E-4926-A973-8A7A78A37A8C}
+name: __Standard Values
+master: {00000000-0000-0000-0000-000000000000}
+template: {DBAFF377-E61E-4926-A973-8A7A78A37A8C}
+templatekey: Search Results
+
+----field----
+field: {F1A1FE9E-A60C-4DDB-A3A0-BB5B29FE732E}
+name: __Renderings
+key: __renderings
+content-length: 463
+
+<r xmlns:xsd="http://www.w3.org/2001/XMLSchema" ><d id="{FE5D7FDF-89C0-4D99-9AA3-B5FBD009C9F3}" l="{08477899-90F2-441E-9174-B5DC0749C125}"><r id="{B5FD8885-BBE8-4B19-A874-9FF185906548}" ph="header" uid="{0F0A3E0D-AF9C-41C8-979B-7D9A11B799F7}" /><r id="{9403594E-26D7-4D53-8302-48D2DCF30807}" ph="main" uid="{4ACE3542-CE6A-400B-887B-1EDA5160D4D7}" /><r id="{F2D8358C-17B9-47DD-9D86-50022064A099}" ph="footer" uid="{C19935B4-7A8B-4B2D-9963-EA619A566056}" /></d></r>
+----version----
+language: en
+version: 1
+revision: 26a67e7f-1cf9-41ef-9d8f-0b903557874c
+
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 16
+
+20200229T134116Z
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+26a67e7f-1cf9-41ef-9d8f-0b903557874c
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 16
+
+20200229T134742Z
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin

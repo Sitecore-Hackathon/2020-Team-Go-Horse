@@ -1,5 +1,6 @@
 ﻿using System.Web.Mvc;
 using Feature.SitecoreModule.Repositories;
+using Feature.SitecoreModule.ViewModels;
 using Sitecore.Data;
 
 namespace Feature.SitecoreModule.Controllers
@@ -18,8 +19,13 @@ namespace Feature.SitecoreModule.Controllers
         public ActionResult SearchResults()
         {
             var keyword = Request.QueryString[SearchParam];
-            var result = _moduleSearchRepository.SearchModules(_bucketRootId, keyword);
-            return View(result);
+            var results = _moduleSearchRepository.SearchModules(_bucketRootId, keyword);
+            var model = new SearchResultsViewModel
+            {
+                Keyword = keyword,
+                Results = results
+            };
+            return View(model);
         }
     }
 }

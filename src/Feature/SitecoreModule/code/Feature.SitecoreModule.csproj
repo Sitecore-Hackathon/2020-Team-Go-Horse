@@ -143,6 +143,8 @@
   <ItemGroup>
     <Compile Include="Controllers\ModuleSearchController.cs" />
     <Compile Include="Controllers\SitecoreModuleController.cs" />
+    <Compile Include="Models\Search\AdvancedResultItem.cs" />
+    <Compile Include="Extension\LinqExtension.cs" />
     <Compile Include="Models\Templates.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

@@ -2,13 +2,10 @@
 using System.Collections.Generic;
 using Sitecore.ContentSearch;
 using Sitecore.ContentSearch.Linq;
-using Sitecore.ContentSearch.SearchTypes;
-using Sitecore.ContentSearch.Linq.Utilities;
 using System.Linq;
-using System.Web;
 using Feature.SitecoreModule.Models;
+using Feature.SitecoreModule.Models.Search;
 using Sitecore.Data;
-using Sitecore.Data.Items;
 
 namespace Feature.SitecoreModule.Repositories
 {
@@ -22,10 +19,9 @@ namespace Feature.SitecoreModule.Repositories
             {
                 using (var context = ContentSearchManager.GetIndex($"sitecore_{Sitecore.Context.Database}_index").CreateSearchContext())
                 {
-                    var query = context.GetQueryable<SearchResultItem>()
-                        //.Where(item => item.Fields["_templates"].ToString().Contains(__BaseSitecoreModule.TemplateID.T)
-                        .Where(item => item.Paths.Contains(bucketId));
-
+                    var templateId = __BaseSitecoreModule.TemplateID.ToGuid().ToString().Replace("-", "");
+                    var query = context.GetQueryable<AdvancedResultItem>()
+                        .Where(item => item.Templates.Contains(templateId) && item.Paths.Contains(bucketId));
                     var results = query.GetResults();
                     foreach (var hit in results.Hits)
                     {
