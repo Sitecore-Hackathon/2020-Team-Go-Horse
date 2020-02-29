@@ -42,6 +42,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Feature.SitecoreModule", "s
 EndProject
 Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "Feature.SitecoreModule.Master", "Feature.SitecoreModule.Master\Feature.SitecoreModule.Master.scproj", "{06EEB548-C567-4818-A274-B9FE13F26104}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GitHubApi", "GitHubApi", "{47EE4CE6-269C-4015-8AF2-A29053C9ED1C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Foundation.GitHubApi", "src\Foundation\GitHubApi\code\Foundation.GitHubApi.csproj", "{C8566013-E90C-4275-B90C-5A09BB604489}"
+EndProject
+Project("{CAA73BB0-EF22-4D79-A57E-DF67B3BA9C80}") = "Foundation.GitHubApi.Master", "src\Foundation\GitHubApi\tds\Foundation.GitHubApi.Master\Foundation.GitHubApi.Master.scproj", "{6914877F-3890-47AB-B647-B7290C35E995}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -68,6 +74,16 @@ Global
 		{06EEB548-C567-4818-A274-B9FE13F26104}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{06EEB548-C567-4818-A274-B9FE13F26104}.Release|Any CPU.Build.0 = Release|Any CPU
 		{06EEB548-C567-4818-A274-B9FE13F26104}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{C8566013-E90C-4275-B90C-5A09BB604489}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8566013-E90C-4275-B90C-5A09BB604489}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8566013-E90C-4275-B90C-5A09BB604489}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8566013-E90C-4275-B90C-5A09BB604489}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6914877F-3890-47AB-B647-B7290C35E995}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6914877F-3890-47AB-B647-B7290C35E995}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6914877F-3890-47AB-B647-B7290C35E995}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{6914877F-3890-47AB-B647-B7290C35E995}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6914877F-3890-47AB-B647-B7290C35E995}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6914877F-3890-47AB-B647-B7290C35E995}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -80,6 +96,9 @@ Global
 		{7B9B4AB3-B2F7-43E1-9C9D-9BD7A1E7786C} = {17DD5718-6E13-4F2C-9738-B410396D4552}
 		{53816C5A-A3B9-48BC-AEBF-760D52B9D756} = {7B9B4AB3-B2F7-43E1-9C9D-9BD7A1E7786C}
 		{06EEB548-C567-4818-A274-B9FE13F26104} = {7B9B4AB3-B2F7-43E1-9C9D-9BD7A1E7786C}
+		{47EE4CE6-269C-4015-8AF2-A29053C9ED1C} = {4FDA1DCD-D33E-447E-91C1-F4AE818E2CF0}
+		{C8566013-E90C-4275-B90C-5A09BB604489} = {47EE4CE6-269C-4015-8AF2-A29053C9ED1C}
+		{6914877F-3890-47AB-B647-B7290C35E995} = {47EE4CE6-269C-4015-8AF2-A29053C9ED1C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {311DA37D-528B-43B2-A99B-E7253F841D46}

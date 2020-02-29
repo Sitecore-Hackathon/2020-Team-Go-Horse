@@ -1,0 +1,5 @@
+﻿<CodeGeneration Generator="Template Class">
+  <shape designerX="25" designerY="40">
+    <template templatename="Sitecore Module" templateid="{FF278675-A306-4078-A9D0-D48B4820C57C}" templateuri="/http://sc93sc.dev.local//master/{FF278675-A306-4078-A9D0-D48B4820C57C}" classname="SitecoreModule" />
+  </shape>
+</CodeGeneration>
