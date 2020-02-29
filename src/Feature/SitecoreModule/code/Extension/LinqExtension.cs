@@ -5,7 +5,7 @@ using System.Web;
 
 namespace Feature.SitecoreModule.Extension
 {
-    public static class Extension
+    public static class LinqExtension
     {
         public static IEnumerable<IEnumerable<TSource>> Batch<TSource>(
                   this IEnumerable<TSource> source, int size)

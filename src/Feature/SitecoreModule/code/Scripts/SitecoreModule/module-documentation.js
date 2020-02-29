@@ -1,5 +1,5 @@
 ﻿$(function() {
-    debugger;
+    
     $("#module-doc-tabs button").click(function() {
         var allTabs = $("#module-doc-tabs button");
         var clickedIndex = allTabs.index(this);
