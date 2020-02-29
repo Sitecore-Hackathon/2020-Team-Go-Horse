@@ -39,6 +39,8 @@ and avoids content redundancy.
 ![Module fields](images/modulefields.jpg?raw=true "Module fields") 
 
 
+
+
 ### Module Title Rendering
 
 Has a little bit more than the title itself.
@@ -50,15 +52,18 @@ Has a little bit more than the title itself.
 3. Module description
 4. Download button
 
+Next, we will visit some of the components used at the Module Template.
+
 
 
 ### Downloads Rendering
 
-List of downloads is dynamically populated from the Git Repository. 
+A list of downloads is dynamically populated from the Git Repository. 
 
 ![Downloads](images/module-downloads.jpg?raw=true "Downloads") 
 
 The module will scan the folder **/sc.package** (at root level) and build the download list.
+
 
 
 
@@ -69,6 +74,7 @@ The documentation is also populated from the Git Repository.
 ![Documentation](images/module-documentation.jpg?raw=true "Documentation") 
 
 **1. First tab (About)** is populated from the /README.md (root level)
+
 **2. Rest of the tabs** are dynamically populated from the folder **/documentation/** (only *.me files are displayed)
 
 
