@@ -36,6 +36,7 @@ namespace Feature.SitecoreModule.Controllers
             var model = new Dictionary<string, string>
             {
                 {"https://github.com/Sitecore-Hackathon/2020-Team-Go-Horse/blob/master/sc.package/test.txt?raw=true", "test.txt"}, 
+                {"https://github.com/Sitecore-Hackathon/2020-Team-Go-Horse/blob/master/sc.package/test.zip?raw=true", "test.zip"},
                 {"https://github.com/Sitecore-Hackathon/2020-Team-Go-Horse/blob/master/sc.package/README.md?raw=true", "README.md"}
             };
             return View(model);
