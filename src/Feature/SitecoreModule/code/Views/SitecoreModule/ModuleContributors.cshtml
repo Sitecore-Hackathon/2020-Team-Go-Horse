@@ -1,29 +1,41 @@
 ﻿@model List<Foundation.GitHubApi.Models.GitContributor>
 @{
     Layout = null;
+    var i = 0;
 }
-<div id="module-contributors-container">
-    <h4>Contributors</h4>
-    @foreach (var contrib in Model)
-    {
-        <div class="card mb-3" style="max-width: 315px;">
-            <div class="row no-gutters">
-                <div class="col-md-4">
-                    <img src="@contrib.avatar_url" class="card-img" alt="@contrib.login">
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body">
-                        <h5 class="card-title">
-                            <a href="@contrib.html_url" target="_blank">
-                                @contrib.login
-                            </a>
-                        </h5>
-                        <p class="card-text">
-                            <small class="text-muted">Contributions: @contrib.contributions</small>
-                        </p>
+<div class="container">
+    <div id="module-contributors-container">
+        <h4>Contributors</h4>
+
+        @foreach (var contrib in Model)
+        {
+            <div class="@(i== 3? "row": "")">
+                <div class="card mb-4" style="max-width: 315px;">
+                    <div class="row no-gutters">
+                        <div class="col-md-4">
+                            <img src="@contrib.avatar_url" class="card-img" alt="@contrib.login">
+                        </div>
+                        <div class="col-md-8">
+                            <div class="card-body">
+                                <h5 class="card-title">
+                                    <a href="@contrib.html_url" target="_blank">
+                                        @contrib.login
+                                    </a>
+                                </h5>
+                                <p class="card-text">
+                                    <small class="text-muted">Contributions: @contrib.contributions</small>
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    }
+            i++;
+
+            if (i == 3)
+            {
+                i = 0;
+            }
+        }
+    </div>
 </div>
