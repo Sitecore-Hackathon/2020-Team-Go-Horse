@@ -54,11 +54,11 @@ Provide documentation  about your module, how do the users use your module, wher
 
 Please include screenshots where necessary. You can add images to the `./images` folder and then link to them from your documentation:
 
-![Hackathon Logo](documentation/images/hackathon.png?raw=true "Hackathon Logo")
+![Hackathon Logo](images/hackathon.png?raw=true "Hackathon Logo")
 
 You can embed images of different formats too:
 
-![Deal With It](documentation/images/deal-with-it.gif?raw=true "Deal With It")
+![Deal With It](images/deal-with-it.gif?raw=true "Deal With It")
 
 And you can embed external images too:
 
