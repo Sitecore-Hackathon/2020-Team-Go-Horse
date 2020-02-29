@@ -25,6 +25,19 @@
     <DebugSymbols>false</DebugSymbols>
     <OutputPath>.\bin\Release\</OutputPath>
     <RecursiveDeployAction>Ignore</RecursiveDeployAction>
+    <PackageName>GoHorse.Marketplace.1.0</PackageName>
+    <PackageAuthor>Go Horse Team</PackageAuthor>
+    <PackagePublisher />
+    <PackageVersion>1.0</PackageVersion>
+    <PackageReadme>
+    </PackageReadme>
+    <SitecoreAssemblyPath />
+    <GeneratePackage>True</GeneratePackage>
+    <SeperateFilesAndItems>True</SeperateFilesAndItems>
+    <PackageExcludeCode>False</PackageExcludeCode>
+    <AddDateTimeToPackageName>False</AddDateTimeToPackageName>
+    <EnableValidations>False</EnableValidations>
+    <ValidationSettingsFilePath>.\Project.GoHorse.Master_Release.xml</ValidationSettingsFilePath>
   </PropertyGroup>
   <ItemGroup>
     <AssemblyAttributes Include="AssemblyFileVersion">
@@ -35,9 +48,18 @@
     </AssemblyAttributes>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\..\..\Feature.SitecoreModule.Master\Feature.SitecoreModule.Master.scproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\..\..\..\Foundation\GitHubApi\tds\Foundation.GitHubApi.Master\Foundation.GitHubApi.Master.scproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
     <ProjectReference Include="..\..\code\Project.GoHorse.csproj">
       <Project>{5bb7fc0f-c4aa-401f-8553-c774c492b72d}</Project>
       <Name>Project.GoHorse</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Project.GoHorse.Content\Project.GoHorse.Content.scproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
@@ -58,6 +80,17 @@
     <SitecoreItem Include="sitecore\templates\Project\GoHorse\Pages\Search Results\__Standard Values.item"><ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization><ItemDeployment>DeployOnce</ItemDeployment></SitecoreItem>
     <SitecoreItem Include="sitecore\templates\Project\GoHorse\Pages\Sitecore Module.item"><ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization><ItemDeployment>DeployOnce</ItemDeployment></SitecoreItem>
     <SitecoreItem Include="sitecore\templates\Project\GoHorse\Pages\Sitecore Module\__Standard Values.item"><ChildItemSynchronization>KeepAllChildrenSynchronized</ChildItemSynchronization><ItemDeployment>DeployOnce</ItemDeployment></SitecoreItem>
+  </ItemGroup>
+  <ItemGroup>
+    <BundledProject Include="..\..\..\..\..\Feature.SitecoreModule.Master\Feature.SitecoreModule.Master.scproj">
+      <ProjectId>{06eeb548-c567-4818-a274-b9fe13f26104}</ProjectId>
+    </BundledProject>
+    <BundledProject Include="..\..\..\..\Foundation\GitHubApi\tds\Foundation.GitHubApi.Master\Foundation.GitHubApi.Master.scproj">
+      <ProjectId>{6914877f-3890-47ab-b647-b7290c35e995}</ProjectId>
+    </BundledProject>
+    <BundledProject Include="..\Project.GoHorse.Content\Project.GoHorse.Content.scproj">
+      <ProjectId>{96bd7560-b539-4424-9fbd-9c29da496ff3}</ProjectId>
+    </BundledProject>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets" Condition="Exists('$(MSBuildExtensionsPath)\HedgehogDevelopment\SitecoreProject\v9.0\HedgehogDevelopment.SitecoreProject.targets')" />
 </Project>
