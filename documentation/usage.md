@@ -22,7 +22,7 @@ and greatest information from the Git Repository.
 
 In a Vanilla Sitecore 9.3, this is how your content tree should look after the installation:
 
-    ![Content Tree](images/content-tree-home.jpg?raw=true "Content Tree") 
+![Content Tree](images/content-tree-home.jpg?raw=true "Content Tree") 
 
 **1. Marketplace** - The homepage - has a search box for users to find and browse Module Pages
 
