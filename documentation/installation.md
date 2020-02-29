@@ -18,5 +18,5 @@ To install this module, follow the steps below:
 * Make sure to install this package in all your CMs and CDs
 6. After analysis, see the analysis results
 7. Click on Install the package
-8. Make sure the installation finishes without errors
+8. Check the installation results to make sure there are no errors
 9. Publish the whole website
