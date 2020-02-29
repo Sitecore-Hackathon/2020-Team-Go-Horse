@@ -43,7 +43,11 @@ namespace Foundation.GitHubApi.Repositories
             var items = jsonObject ?? new List<GitItem>();
             var item = items.FirstOrDefault(x => x.name.ToLower().Equals(fileName));
             if (item != null)
-                item.HtmlValue = ConvertMarkdownToHtml(gitRoot, item.download_url);
+            {
+                var itemUrl = item.html_url.Remove(item.html_url.LastIndexOf("/", StringComparison.Ordinal));
+                item.HtmlValue = ConvertMarkdownToHtml(itemUrl, item.download_url);
+            }
+
             return item;
         }
 
@@ -60,7 +64,11 @@ namespace Foundation.GitHubApi.Repositories
             var items = jsonObject ?? new List<GitItem>();
             items = items.Where(p=>p.type=="file").ToList();
             foreach (var item in items)
-                item.HtmlValue = ConvertMarkdownToHtml(gitRoot, item.download_url);
+            {
+                var itemUrl = item.html_url.Remove(item.html_url.LastIndexOf("/", StringComparison.Ordinal));
+                item.HtmlValue = ConvertMarkdownToHtml(itemUrl, item.download_url);
+            }
+
             return items;
         }
 
@@ -142,7 +150,6 @@ namespace Foundation.GitHubApi.Repositories
 
         private string ReplaceImagesFromJsonByRawImage(string gitRoot, string rawMdContent)
         {
-            const string blobPartialUrl = "blob/master";
             //Pattern for images inside the MD file: ![image name](local URL "Image Name")
             if (!rawMdContent.Contains("!["))
                 return rawMdContent;
@@ -164,7 +171,7 @@ namespace Foundation.GitHubApi.Repositories
                     continue;
                 }
 
-                rawMdContent = rawMdContent.Insert(lastIndex + 2, $"{gitRoot}/{blobPartialUrl}/"); //inserting the public URL to render the right image.
+                rawMdContent = rawMdContent.Insert(lastIndex + 2, $"{gitRoot}/"); //inserting the public URL to render the right image.
 
                 if (nextIndex == -1 || nextIndex == lastIndex)
                     break;
