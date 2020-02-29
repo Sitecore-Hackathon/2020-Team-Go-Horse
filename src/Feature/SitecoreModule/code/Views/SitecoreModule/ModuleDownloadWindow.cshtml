@@ -1,4 +1,4 @@
-﻿@model Dictionary<string, string>
+﻿@model List<Foundation.GitHubApi.Models.GitItem>
 @{
     Layout = null;
 }
@@ -19,8 +19,8 @@
                     @foreach (var entry in Model)
                     {
                         <li>
-                            <a href="@entry.Key" target="_blank">
-                                @entry.Value
+                            <a href="@entry.download_url" target="_blank">
+                                @entry.name
                             </a>
                         </li>
                     }

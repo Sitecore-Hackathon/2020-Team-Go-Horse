@@ -1,12 +1,14 @@
 ﻿using System.Collections.Generic;
+using Foundation.GitHubApi.Models;
 
 namespace Foundation.GitHubApi.Repositories
 {
     public interface IGitHubApiRepository
     {
-        KeyValuePair<string,string> GetRootPage(string gitRoot);
-        Dictionary<string, string> GetDocumentationPages(string gitRoot);
-        Dictionary<string,string> GetContributors(string gitRoot);
-        Dictionary<string,string> GetDownloads(string gitRoot);
+        GitRepository GetGitRepository(string gitRoot);
+        GitItem GetRootPage(string gitRoot);
+        List<GitItem> GetDocumentationPages(string gitRoot);
+        List<GitContributor> GetContributors(string gitRoot);
+        List<GitItem> GetDownloads(string gitRoot);
     }
 }
