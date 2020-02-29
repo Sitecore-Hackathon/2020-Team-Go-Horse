@@ -13,7 +13,7 @@ Instead of copy/pasting, you will link modules directly with their respective Gi
 The GitHub WebAPI is then used to keep the Module Page in Sitecore always updated with the latest 
 and greatest information from the Git Repository.
 
-![Module fields](documentation/images/modulefields.jpg?raw=true "Module fields") 
+![Module fields](images/modulefields.jpg?raw=true "Module fields") 
 
 
 ## Usage
