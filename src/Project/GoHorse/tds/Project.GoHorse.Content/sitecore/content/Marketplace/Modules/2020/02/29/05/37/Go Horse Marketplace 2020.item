@@ -12,15 +12,8 @@ templatekey: Sitecore Module
 ----version----
 language: en
 version: 1
-revision: 17b142f3-0213-462f-9a2d-09ddc4fe3838
+revision: f743f488-163e-44be-a146-89cc67be7fa9
 
-----field----
-field: {C96833C8-6E8A-4711-9DAD-0C8A3BCB5B96}
-name: Page Title
-key: page title
-content-length: 20
-
-Go Horse Marketplace
 ----field----
 field: {586B418F-3F94-4BD5-999B-478106F47F34}
 name: Browser Title
@@ -46,9 +39,9 @@ https://github.com/Sitecore-Hackathon/2020-Team-Go-Horse
 field: {EB7E1441-DC8C-4B40-9740-29B3435B408B}
 name: Description
 key: description
-content-length: 99
+content-length: 45
 
-Marketplace website integrated with Git , contains popular modules to be showcased to the community
+Small description about what this module does
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -62,14 +55,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-17b142f3-0213-462f-9a2d-09ddc4fe3838
+f743f488-163e-44be-a146-89cc67be7fa9
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20200229T184157Z
+20200229T154745Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

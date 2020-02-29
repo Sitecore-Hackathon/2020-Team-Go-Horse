@@ -15,13 +15,6 @@ version: 1
 revision: 1abf64a6-43cf-4b3f-a3e6-a8d6fbec1660
 
 ----field----
-field: {C96833C8-6E8A-4711-9DAD-0C8A3BCB5B96}
-name: Page Title
-key: page title
-content-length: 7
-
-Results
-----field----
 field: {586B418F-3F94-4BD5-999B-478106F47F34}
 name: Browser Title
 key: browser title

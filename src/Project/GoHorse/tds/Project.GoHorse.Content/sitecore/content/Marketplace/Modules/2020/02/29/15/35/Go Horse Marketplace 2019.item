@@ -19,15 +19,8 @@ content-length: 2
 ----version----
 language: en
 version: 1
-revision: ace3eb6e-c94c-4d66-997e-70ac4b6f5f9b
+revision: eecbf83b-cbee-4584-9906-67485f38226f
 
-----field----
-field: {C96833C8-6E8A-4711-9DAD-0C8A3BCB5B96}
-name: Page Title
-key: page title
-content-length: 20
-
-Go Horse Marketplace
 ----field----
 field: {586B418F-3F94-4BD5-999B-478106F47F34}
 name: Browser Title
@@ -46,9 +39,9 @@ Go Horse Marketplace 2019
 field: {48D18565-5FDD-431A-BCED-4EA59C161E1D}
 name: Git Repository
 key: git repository
-content-length: 52
+content-length: 50
 
-  https://github.com/Sitecore-Hackathon/2019-GoHorse
+https://github.com/Sitecore-Hackathon/2019-GoHorse
 ----field----
 field: {EB7E1441-DC8C-4B40-9740-29B3435B408B}
 name: Description
@@ -69,18 +62,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-ace3eb6e-c94c-4d66-997e-70ac4b6f5f9b
+eecbf83b-cbee-4584-9906-67485f38226f
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20200229T154740Z
+20200229T184638Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\Admin
+sitecore\admin

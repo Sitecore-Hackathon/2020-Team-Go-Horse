@@ -15,13 +15,6 @@ version: 1
 revision: 406930eb-80f8-4046-a6da-6c9eb8c52305
 
 ----field----
-field: {C96833C8-6E8A-4711-9DAD-0C8A3BCB5B96}
-name: Page Title
-key: page title
-content-length: 5
-
-$name
-----field----
 field: {586B418F-3F94-4BD5-999B-478106F47F34}
 name: Browser Title
 key: browser title
