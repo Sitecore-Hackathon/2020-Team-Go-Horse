@@ -36,7 +36,7 @@ namespace Feature.SitecoreModule.Repositories
                 Sitecore.Diagnostics.Log.Error($"Error searching modules using keyword '{keyword}'", e, this);
             }
 
-            return ret;
+            return ret.OrderBy(f=> f.ModuleName).ToList();
         }
     }
 }

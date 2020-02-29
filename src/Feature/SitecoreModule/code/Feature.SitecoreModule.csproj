@@ -124,6 +124,7 @@
     <None Include="Properties\PublishProfiles\Local.pubxml" />
     <None Include="README.md" />
     <Content Include="Scripts\SitecoreModule\module-documentation.js" />
+    <Content Include="Styles\SitecoreModule\module.css" />
     <Content Include="Views\SitecoreModule\SiteNavigation.cshtml" />
     <Content Include="Views\SitecoreModule\ModuleTitle.cshtml" />
     <Content Include="Views\SitecoreModule\ModuleDocumentation.cshtml" />
