@@ -121,6 +121,7 @@
     <Content Include="Views\SitecoreModule\ModuleTitle.cshtml" />
     <Content Include="Views\SitecoreModule\ModuleDocumentation.cshtml" />
     <Content Include="Views\SitecoreModule\SiteFooter.cshtml" />
+    <Content Include="Views\SitecoreModule\ModuleDownloadWindow.cshtml" />
     <None Include="Views\web.config" />
     <None Include="web.config" />
     <None Include="web.Debug.config">
@@ -139,12 +140,16 @@
       <DependentUpon>Templates.scx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="ViewModel\ModuleDocumentationEntry.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\Foundation\GitHubApi\code\Foundation.GitHubApi.csproj">
+      <Project>{c8566013-e90c-4275-b90c-5a09bb604489}</Project>
+      <Name>Foundation.GitHubApi</Name>
+    </ProjectReference>
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
