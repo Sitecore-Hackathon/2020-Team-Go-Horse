@@ -2,8 +2,8 @@
 version: 1
 id: {A3430709-7F3B-4353-9B0F-ABF8E657F48F}
 database: master
-path: /sitecore/content/Marketplace/Modules/2020/02/29/05/37/Go Horse Marketplace 2018
-parent: {3A39D841-2F92-4B29-952F-FFCE0CE5F17A}
+path: /sitecore/content/Marketplace/Modules/2020/02/29/16/57/Go Horse Marketplace 2018
+parent: {60F7C6EE-0480-4D6B-895D-089EC18CCF42}
 name: Go Horse Marketplace 2018
 master: {00000000-0000-0000-0000-000000000000}
 template: {FF278675-A306-4078-A9D0-D48B4820C57C}
