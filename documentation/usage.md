@@ -26,7 +26,11 @@ In a Vanilla Sitecore 9.3, this is how your content tree should look after the i
 
 **1. Marketplace** - The homepage - has a search box for users to find and browse Module Pages
 
+![Homepage](images/page-home.jpg?raw=true "Homepage") 
+
 **2. Results** - Shows a list of modules, filtered by the search keyword input by the user
+
+![Search Results](images/page-search.jpg?raw=true "Search Results") 
 
 **3. Modules** - Bulk repository of Sitecore modules
 

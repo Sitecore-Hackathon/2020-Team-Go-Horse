@@ -153,6 +153,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Templates.scx</DependentUpon>
     </Compile>
+    <Compile Include="Models\__BaseSitecoreModule.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\IModuleSearchRepository.cs" />
     <Compile Include="Repositories\ModuleSearchRepository.cs" />
