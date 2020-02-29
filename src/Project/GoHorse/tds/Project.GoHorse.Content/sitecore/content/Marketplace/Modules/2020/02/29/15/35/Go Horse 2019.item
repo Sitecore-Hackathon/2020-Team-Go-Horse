@@ -2,9 +2,9 @@
 version: 1
 id: {1EF33DD6-BB4F-41EA-A10C-D48DC06D333B}
 database: master
-path: /sitecore/content/Marketplace/Modules/2020/02/29/15/35/Go Horse Marketplace 2019
+path: /sitecore/content/Marketplace/Modules/2020/02/29/15/35/Go Horse 2019
 parent: {DDF42DF1-77B0-4686-B132-43DA0C6BCC0B}
-name: Go Horse Marketplace 2019
+name: Go Horse 2019
 master: {00000000-0000-0000-0000-000000000000}
 template: {FF278675-A306-4078-A9D0-D48B4820C57C}
 templatekey: Sitecore Module
@@ -19,22 +19,22 @@ content-length: 2
 ----version----
 language: en
 version: 1
-revision: eecbf83b-cbee-4584-9906-67485f38226f
+revision: fe7054c1-f79a-43bd-8f56-3353414ad821
 
 ----field----
 field: {586B418F-3F94-4BD5-999B-478106F47F34}
 name: Browser Title
 key: browser title
-content-length: 20
+content-length: 24
 
-Go Horse Marketplace
+Go Horse Face Login 2019
 ----field----
 field: {8DE5D2F7-7508-4A5F-A547-12433E7F64BC}
 name: Module Name
 key: module name
-content-length: 25
+content-length: 24
 
-Go Horse Marketplace 2019
+Go Horse Face Login 2019
 ----field----
 field: {48D18565-5FDD-431A-BCED-4EA59C161E1D}
 name: Git Repository
@@ -46,9 +46,9 @@ https://github.com/Sitecore-Hackathon/2019-GoHorse
 field: {EB7E1441-DC8C-4B40-9740-29B3435B408B}
 name: Description
 key: description
-content-length: 23
+content-length: 128
 
-Face recognition module
+This module enables authentication via face recognition by integrating xConnect and external face recognization API named Kairos
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -62,14 +62,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-eecbf83b-cbee-4584-9906-67485f38226f
+fe7054c1-f79a-43bd-8f56-3353414ad821
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20200229T184638Z
+20200229T220622Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by

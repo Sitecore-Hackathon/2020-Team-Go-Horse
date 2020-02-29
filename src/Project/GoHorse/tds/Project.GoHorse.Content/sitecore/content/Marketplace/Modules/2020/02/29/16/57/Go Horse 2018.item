@@ -2,9 +2,9 @@
 version: 1
 id: {A3430709-7F3B-4353-9B0F-ABF8E657F48F}
 database: master
-path: /sitecore/content/Marketplace/Modules/2020/02/29/16/57/Go Horse Marketplace 2018
+path: /sitecore/content/Marketplace/Modules/2020/02/29/16/57/Go Horse 2018
 parent: {60F7C6EE-0480-4D6B-895D-089EC18CCF42}
-name: Go Horse Marketplace 2018
+name: Go Horse 2018
 master: {00000000-0000-0000-0000-000000000000}
 template: {FF278675-A306-4078-A9D0-D48B4820C57C}
 templatekey: Sitecore Module
@@ -19,22 +19,22 @@ content-length: 2
 ----version----
 language: en
 version: 1
-revision: dbdce111-52ff-41e8-9ee9-fe2bfae71629
+revision: 878cf861-8374-40a5-aa8f-2253319ee5f0
 
 ----field----
 field: {586B418F-3F94-4BD5-999B-478106F47F34}
 name: Browser Title
 key: browser title
-content-length: 20
+content-length: 29
 
-Go Horse Marketplace
+Go Horse HashTag Monitor 2018
 ----field----
 field: {8DE5D2F7-7508-4A5F-A547-12433E7F64BC}
 name: Module Name
 key: module name
-content-length: 25
+content-length: 29
 
-Go Horse Marketplace 2018
+Go Horse HashTag Monitor 2018
 ----field----
 field: {48D18565-5FDD-431A-BCED-4EA59C161E1D}
 name: Git Repository
@@ -46,9 +46,9 @@ https://github.com/Sitecore-Hackathon/2018-Go-Horse
 field: {EB7E1441-DC8C-4B40-9740-29B3435B408B}
 name: Description
 key: description
-content-length: 15
+content-length: 135
 
-Twitter handler
+The Module automatically tracks all tweets for a specified #hashtag and identify accounts that interact with it and import them to xDB.
 ----field----
 field: {25BED78C-4957-4165-998A-CA1B52F67497}
 name: __Created
@@ -62,18 +62,18 @@ name: __Revision
 key: __revision
 content-length: 36
 
-dbdce111-52ff-41e8-9ee9-fe2bfae71629
+878cf861-8374-40a5-aa8f-2253319ee5f0
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20200229T154737Z
+20200229T220616Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
 key: __updated by
 content-length: 14
 
-sitecore\Admin
+sitecore\admin
