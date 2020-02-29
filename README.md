@@ -10,7 +10,7 @@ Module Authors will usually add documentation pages to the Git Repository, so wh
 Instead of copy/pasting, you can link your module directly with a Git Repository, and have the Module Page always updated 
 with the latest and greatest information from Git.
 
-![Module fields](documentation/images/module-fields.jpg?raw=true "Module fields") 
+![Module fields](documentation/images/modulefields.jpg?raw=true "Module fields") 
 
 
 # Documentation
