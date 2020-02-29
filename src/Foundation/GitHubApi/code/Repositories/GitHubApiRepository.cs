@@ -131,12 +131,13 @@ namespace Foundation.GitHubApi.Repositories
         public string ConvertMarkdownToHtml(string gitRoot, string rawMdUrl, string folder = "")
         {
             var response = GetHttpRequest(rawMdUrl);
-            response = ReplaceImagesFromJsonByRawImage(gitRoot, response, folder);
+            response = ReplaceImagesFromJson(gitRoot, response, folder);
+            response = ReplaceLinksFromJson(gitRoot, response, folder);
             var markDownResult = CommonMark.CommonMarkConverter.Convert(response);
             return markDownResult;
         }
 
-        private string ReplaceImagesFromJsonByRawImage(string gitRoot, string rawMdContent, string folder = "")
+        private string ReplaceImagesFromJson(string gitRoot, string rawMdContent, string folder = "")
         {
             const string imgOpen = "![";
             const string imgClose = "\")";
@@ -165,18 +166,56 @@ namespace Foundation.GitHubApi.Repositories
                 imagesToReplace.Add(new KeyValuePair<string, string>(imgOriginal, imgReplaced));
                 index++;
             }
+            if (!imagesToReplace.Any()) 
+                return rawMdContent;
 
             // Replace all
-            if (imagesToReplace.Any())
-            {
-                foreach (var pair in imagesToReplace)
-                {
-                    if (pair.Key != pair.Value)
-                        rawMdContent = rawMdContent.Replace(pair.Key, pair.Value);
-                }
-            }
+            foreach (var pair in imagesToReplace)
+                if (pair.Key != pair.Value)
+                    rawMdContent = rawMdContent.Replace(pair.Key, pair.Value);
 
             return rawMdContent;            
         }
+
+        private string ReplaceLinksFromJson(string gitRoot, string rawMdContent, string folder = "")
+        {
+            const string linkOpen = " [";
+            const string linkClose = ")";
+            const string linkPreUrl = "](";
+
+            if (!string.IsNullOrEmpty(folder))
+                folder = $"{folder}/";
+
+            // Nothing to parse - exit
+            if (!rawMdContent.Contains(linkOpen))
+                return rawMdContent;
+
+            // Build strings to be replaced
+            var index = 0;
+            var linksToReplace = new List<KeyValuePair<string,string>>();
+            while ((index=rawMdContent.IndexOf(linkOpen, index, StringComparison.Ordinal)) != -1)
+            {
+                var indexOfNextClosing = rawMdContent.Substring(index).IndexOf(linkClose, StringComparison.Ordinal);
+                indexOfNextClosing = indexOfNextClosing + linkClose.Length;
+
+                var linkOriginal = rawMdContent.Substring(index, indexOfNextClosing);
+                var linkReplaced = linkOriginal.Contains("http://") || linkOriginal.Contains("https://")
+                    ? linkOriginal
+                    : linkOriginal.Replace(linkPreUrl, $"{linkPreUrl}{gitRoot}/blob/master/{folder}");
+
+                linksToReplace.Add(new KeyValuePair<string, string>(linkOriginal, linkReplaced));
+                index++;
+            }
+            if (!linksToReplace.Any()) 
+                return rawMdContent;
+
+            // Replace all
+            foreach (var pair in linksToReplace)
+                if (pair.Key != pair.Value)
+                    rawMdContent = rawMdContent.Replace(pair.Key, pair.Value);
+
+            return rawMdContent;            
+        }
+
     }
 }

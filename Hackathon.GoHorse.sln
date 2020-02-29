@@ -22,6 +22,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Documentation", "Documentation", "{DAFED8F5-6CBD-4384-AAD6-DC3BCCF24911}"
 	ProjectSection(SolutionItems) = preProject
 		documentation\installation.md = documentation\installation.md
+		documentation\usage.md = documentation\usage.md
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "images", "images", "{D27C83D2-2EAF-4E44-A1ED-2B3C2EBB5854}"

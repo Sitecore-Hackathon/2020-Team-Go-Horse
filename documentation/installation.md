@@ -1,71 +1,42 @@
-# Documentation
-
-The documentation for this years Hackathon must be provided as a readme in Markdown format as part of your submission. 
-
-You can find a very good reference to Github flavoured markdown reference in [this cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet). If you want something a bit more WYSIWYG for editing then could use [StackEdit](https://stackedit.io/app) which provides a more user friendly interface for generating the Markdown code. Those of you who are [VS Code fans](https://code.visualstudio.com/docs/languages/markdown#_markdown-preview) can edit/preview directly in that interface too.
-
-Examples of things to include are the following.
-
-## Summary
-
-**Category:** Hackathon Category
-
-What is the purpose of your module? What problem does it solve and how does it do that?
+# Installation Guide
 
 ## Pre-requisites
 
-Does your module rely on other Sitecore modules or frameworks?
-
-- List any dependencies
-- Or other modules that must be installed
-- Or services that must be enabled/configured
+- Sitecore 9.3
+- .NET Framework 4.7.2
 
 ## Installation
 
-Provide detailed instructions on how to install the module, and include screenshots where necessary.
+To install this module, follow the steps below:
 
-1. Use the Sitecore Installation wizard to install the [package](#link-to-package)
-2. ???
-3. Profit
+1. Download the latest [Installation .update file](https://github.com/Sitecore-Hackathon/2020-Team-Go-Horse/blob/master/sc.package)
 
-## Configuration
+2. Open the Sitecore Installation wizard (https://yoursitecore/sitecore/admin/UpdateInstallationWizard.aspx)
 
-How do you configure your module once it is installed? Are there items that need to be updated with settings, or maybe config files need to have keys updated?
+3. Select the .update package that you previously downloaded 
 
-Remember you are using Markdown, you can provide code samples too:
+4. Click the button "Analyze the package""
 
-```xml
-<?xml version="1.0"?>
-<!--
-  Purpose: Configuration settings for my hackathon module
--->
-<configuration xmlns:patch="http://www.sitecore.net/xmlconfig/">
-  <sitecore>
-    <settings>
-      <setting name="MyModule.Setting" value="Hackathon" />
-    </settings>
-  </sitecore>
-</configuration>
-```
+5. Analyze the package - make sure you have the appropriated checks according to your environment:
+* Make sure to install this package in all your CMs and CDs
 
-## Usage
+![Analyze the package](images/analyze-pack.jpg?raw=true "Analyze the package") 
 
-Provide documentation  about your module, how do the users use your module, where are things located, what do icons mean, are there any secret shortcuts etc.
+6. After analysis, see the analysis results
 
-Please include screenshots where necessary. You can add images to the `./images` folder and then link to them from your documentation:
+7. Click on Install the package
 
-![Hackathon Logo](images/hackathon.png?raw=true "Hackathon Logo")
+8. Check the installation results to make sure there are no errors
 
-You can embed images of different formats too:
+9. Publish the whole website
 
-![Deal With It](images/deal-with-it.gif?raw=true "Deal With It")
+10. To test the application, browse your website normally. Eg: https://yoursitecore
 
-And you can embed external images too:
 
-![Random](https://placeimg.com/480/240/any "Random")
+    **The modifies the default site name="website"**
 
-## Video
 
-Please provide a video highlighing your Hackathon module submission and provide a link to the video. Either a [direct link](https://www.youtube.com/watch?v=EpNhxW4pNKk) to the video, upload it to this documentation folder or maybe upload it to Youtube...
 
-[![Sitecore Hackathon Video Embedding Alt Text](https://img.youtube.com/vi/EpNhxW4pNKk/0.jpg)](https://www.youtube.com/watch?v=EpNhxW4pNKk)
+## Documentation
+
+* [Usage instructions](usage.md)
