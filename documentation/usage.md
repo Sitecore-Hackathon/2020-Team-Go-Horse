@@ -83,5 +83,5 @@ A list of contributors is also populated from the Git Repository.
 
 ## Video
 
-For a quick introduction to this module, check this [Video Presentation](https://www.youtube.com/watch?v=EpNhxW4pNKk)
+For a quick introduction to this module, check this [Video Presentation](https://youtu.be/VJeheZ4DE08)
 
