@@ -26,6 +26,6 @@ namespace Feature.SitecoreModule.Controllers
                 Results = results
             };
             return View(model);
-        }
+        }               
     }
 }

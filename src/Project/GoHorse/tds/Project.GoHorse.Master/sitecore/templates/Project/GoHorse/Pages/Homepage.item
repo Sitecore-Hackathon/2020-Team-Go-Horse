@@ -1,18 +1,39 @@
 ----item----
 version: 1
-id: {362DF6A5-0CA9-484D-8F1B-8B6480FF7FE8}
+id: {9110A8CA-DDF3-4084-BA41-8680548AE887}
 database: master
-path: /sitecore/content/Home/Modules/2020
-parent: {1F774DA7-DF90-40D6-ABF0-81DE1180CF63}
-name: 2020
+path: /sitecore/templates/Project/GoHorse/Pages/Homepage
+parent: {0B5B0496-99AE-4A1E-AC68-F55F51814901}
+name: Homepage
 master: {00000000-0000-0000-0000-000000000000}
-template: {ADB6CA4F-03EF-4F47-B9AC-9CE2BA53FF97}
-templatekey: Bucket
+template: {AB86861A-6030-46C5-B394-E8F99E8B87DB}
+templatekey: Template
 
+----field----
+field: {12C33F3F-86C5-43A5-AEB4-5598CEC45116}
+name: __Base template
+key: __base template
+content-length: 38
+
+{723F04A3-D01F-4DE8-8541-4827DE890529}
+----field----
+field: {F7D48A55-2158-4F02-9356-756654404F73}
+name: __Standard values
+key: __standard values
+content-length: 38
+
+{F6203C13-10C3-454D-AC83-BE5D33138E5C}
+----field----
+field: {06D5295C-ED2F-4A54-9BF2-26228D113318}
+name: __Icon
+key: __icon
+content-length: 32
+
+/~/icon/peoplev2/32x32/house.png
 ----version----
 language: en
 version: 1
-revision: cab799c6-2436-40c4-a6ba-d35cd996b21f
+revision: f90d97d5-bade-4d8c-ab01-4e59440209f5
 
 ----field----
 field: {52807595-0F8F-4B20-8D2A-CB71D28C6103}
@@ -27,7 +48,7 @@ name: __Created
 key: __created
 content-length: 16
 
-20200229T053712Z
+20200229T144806Z
 ----field----
 field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
 name: __Created by
@@ -41,14 +62,14 @@ name: __Revision
 key: __revision
 content-length: 36
 
-cab799c6-2436-40c4-a6ba-d35cd996b21f
+f90d97d5-bade-4d8c-ab01-4e59440209f5
 ----field----
 field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
 name: __Updated
 key: __updated
 content-length: 16
 
-20200229T053712Z
+20200229T144916Z
 ----field----
 field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
 name: __Updated by
