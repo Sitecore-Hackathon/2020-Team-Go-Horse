@@ -6,35 +6,37 @@
 <div class="container">
     <div id="module-contributors-container">
         <h4>Contributors</h4>
+        <div class="container">
 
-        @foreach (var batch in Model.Batch(3))
-        {
-            <div class="row">
+            @foreach (var batch in Model.Batch(3))
+            {
+                <div class="row">
 
-                @foreach (var contrib in batch)
-                {
-                    <div class="card mb-4" style="max-width: 315px;">
-                        <div class="row no-gutters">
-                            <div class="col-md-4">
-                                <img src="@contrib.avatar_url" class="card-img" alt="@contrib.login">
-                            </div>
-                            <div class="col-md-8">
-                                <div class="card-body">
-                                    <h5 class="card-title">
-                                        <a href="@contrib.html_url" target="_blank">
-                                            @contrib.login
-                                        </a>
-                                    </h5>
-                                    <p class="card-text">
-                                        <small class="text-muted">Contributions: @contrib.contributions</small>
-                                    </p>
+                    @foreach (var contrib in batch)
+                    {
+                        <div class="card mb-4" style="max-width: 315px;">
+                            <div class="row no-gutters">
+                                <div class="col-md-4">
+                                    <img src="@contrib.avatar_url" class="card-img" alt="@contrib.login">
+                                </div>
+                                <div class="col-md-8">
+                                    <div class="card-body">
+                                        <h5 class="card-title">
+                                            <a href="@contrib.html_url" target="_blank">
+                                                @contrib.login
+                                            </a>
+                                        </h5>
+                                        <p class="card-text">
+                                            <small class="text-muted">Contributions: @contrib.contributions</small>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                 }
-            </div>
-        }
+                    }
+                </div>
+            }
+        </div>
     </div>
 </div>
 
