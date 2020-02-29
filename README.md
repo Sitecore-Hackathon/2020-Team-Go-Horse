@@ -17,5 +17,5 @@ and greatest information from the Git Repository.
 
 ## Documentation
 
-* [Installation Guide](documentation/installation.md) - Installation instructions
-* [Usage](documentation/usage.md) - Usage instructions
+* [Installation Guide](documentation/installation.md)
+* [Usage instructions](documentation/usage.md)
