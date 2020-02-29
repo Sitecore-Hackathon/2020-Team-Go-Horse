@@ -1,0 +1,21 @@
+﻿.contributor {
+    padding-top:15px;
+}
+.min-screen {
+    min-height: 800px;
+}
+.card-contributor {
+    max-width: 277px;
+    max-height: 92px;
+}
+.footer-center-custom {
+    padding-bottom: 15px;
+}
+
+.home-search {
+    padding-left: 30%;
+    background: lightgray;
+    margin-top: 14%;
+    padding: 14%;
+}
+

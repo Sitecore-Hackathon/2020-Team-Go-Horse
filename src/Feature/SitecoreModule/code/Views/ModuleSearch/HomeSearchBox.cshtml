@@ -3,13 +3,21 @@
     var searchFormAction = Sitecore.Links.LinkManager.GetItemUrl(Sitecore.Context.Database.GetItem(new ID("{4644D9C3-9106-4F50-856D-4DC33001CF24}")));
 }
 <div class="container">
-    <h1>
+    <h1 class="text-center">
         <p>&nbsp;</p>
         Welcome to the Sitecore Marketplace
     </h1>
 
-    <form class="form-inline " method="get" action="@(searchFormAction)">
-        <input name="q" class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
+
+    <form class="home-search" method="get" action="@(searchFormAction)">
+        <h2>
+            Discover Sitecore modules
+        </h2>
+        <p>
+            SITECORE MARKETPLACE IS HOME TO OVER 1100 SITECORE MODULES. GET A GLIMPSE BY EXPLORING MODULES RIGHT HERE...
+        </p>
+
+        <input name="q" class="form-control mr-sm-2 home-search-custom" type="text" placeholder="Search" aria-label="Search">
         <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
     </form>
 </div>
