@@ -32,7 +32,9 @@ To install this module, follow the steps below:
 
 10. To test the application, browse your website normally. Eg: https://yoursitecore
 
+
 **The modifies the default site name="website"**
+
 
 
 ## Documentation
